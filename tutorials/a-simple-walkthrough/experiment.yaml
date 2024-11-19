@@ -58,7 +58,7 @@ method:
     path: pkill
     arguments: "–echo -HUP -F sunset.pid"
   pauses:
-    after: 1
+    after: 5
 rollbacks:
 - type: action
   name: swap-to-valid-cert

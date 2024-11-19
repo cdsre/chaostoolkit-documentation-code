@@ -49,6 +49,8 @@ def run():
         "server.ssl_certificate": os.path.join(cur_dir, "cert.pem")
     })
     PIDFile(cherrypy.engine, 'astre.pid').subscribe()
+    output_log="astre.log"
+    Daemonizer(cherrypy.engine, stdout=output_log, stderr=output_log).subscribe()
     cherrypy.quickstart(Root())
 
 

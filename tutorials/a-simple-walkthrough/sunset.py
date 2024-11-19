@@ -36,6 +36,8 @@ def run():
         "server.ssl_certificate": cert_path
     })
     PIDFile(cherrypy.engine, 'sunset.pid').subscribe()
+    output_log="sunset.log"
+    Daemonizer(cherrypy.engine, stdout=output_log, stderr=output_log).subscribe()
     cherrypy.quickstart(Root())
 
 

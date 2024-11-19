@@ -81,7 +81,7 @@
                 "arguments": "--echo -HUP -F sunset.pid"
             },
             "pauses": {
-                "after": 1
+                "after": 5
             }
         }
     ],
